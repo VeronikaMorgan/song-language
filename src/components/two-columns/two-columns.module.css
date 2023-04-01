@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper_type_narrow {
+  gap: 0;
+}
+
+.wrapper_type_wide {
+  gap: 20px;
+}

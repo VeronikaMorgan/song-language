@@ -4,7 +4,8 @@ import logo_sm from '../../images/header/logo.svg'
 import headerStyles from './header.module.css'
 const Header: FC = () => {
   const linkActive:string = `${headerStyles.header__item_active} link-default`;
-  const linkDefault:string = `${headerStyles.header__item} link-default`
+  const linkDefault:string = `${headerStyles.header__item} link-default`;
+  
   return (
     <header className={headerStyles.header}>
       <div className={headerStyles.header__wrapper}>

@@ -73,7 +73,6 @@
 }
 
 .header__item {
-  color: white;
   font-weight: 600;
   font-size: var(--header-sm-size);
   /* transition: all 0.2s linear; */
