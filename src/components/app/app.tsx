@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Route, Routes } from "react-router";
 import Header from "../header/header";
-import styles from './app.module.css';
+import styles from './app.module.scss';
 import FundamentalsPage from "../../pages/fundamentals/fundamentals";
 import MethodsPage from "../../pages/methods/methods";
 import UsagePage from "../../pages/usage/usage";

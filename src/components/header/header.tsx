@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { NavLink, Link } from "react-router-dom";
-import logo_sm from '../../images/header/logo.svg'
-import headerStyles from './header.module.css'
+import headerStyles from './header.module.scss'
+
 const Header: FC = () => {
   const linkActive:string = `${headerStyles.header__item_active} link-default`;
   const linkDefault:string = `${headerStyles.header__item} link-default`;
-  
+
   return (
     <header className={headerStyles.header}>
       <div className={headerStyles.header__wrapper}>
@@ -30,7 +30,7 @@ const Header: FC = () => {
           <Link to='/' className={`${headerStyles.header__button} link-default`}>Профиль</Link>
         </div>
       </div>
-      <div className={headerStyles.header__main_logo}></div>
+      <div className={headerStyles.header__title}></div>
       <div className={headerStyles.header__decor}></div>
     </header >
   )

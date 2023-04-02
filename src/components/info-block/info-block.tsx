@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from './info-block.module.css'
+import styles from './info-block.module.scss'
 
 interface IinfoBlock {
   children: React.ReactNode

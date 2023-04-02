@@ -1,0 +1,225 @@
+.title {
+  color: var(--main-highlight-color);
+  font-size: 4.8rem;
+  font-weight: 800;
+  display: flex;
+  align-items: baseline;
+
+  &::after {
+    content: '';
+    background-image: url('../../images/fundamentals/question-mark.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 61px;
+    height: 111px;
+    display: block;
+    transform: rotate(15deg);
+  }
+}
+
+.img {
+  content: '';
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+
+.intro__img {
+  composes: img;
+  background-image: url('../../images/fundamentals/frog.png');
+  width: 415px;
+  height: 415px;
+  position: relative;
+  margin: 0 auto;
+  align-self: flex-start;
+
+  &::before {
+    content: '';
+    background: rgb(174, 221, 177);
+    background: radial-gradient(circle, rgba(174, 221, 177, 0.734) 0%, rgba(174, 221, 177, 0.591) 35%, rgba(202, 244, 204, 0.14609593837535018) 100%);
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    border-radius: 50%;
+    top: -50%;
+    left: -50%;
+    display: block;
+    filter: blur(80px);
+    z-index: -1;
+  }
+}
+
+.integration {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  z-index: 3;
+  gap: 5rem;
+
+  &__img {
+    composes: img;
+    background-image: url('../../images/fundamentals/integration.png');
+    width: 415px;
+    height: 305px;
+    position: relative;
+
+    &::before {
+      content: '';
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+      background-image: url('../../images/fundamentals/globe.png');
+      width: 130px;
+      height: 125px;
+      position: absolute;
+      top: -45%;
+      left: 40%;
+      animation: rotation 20s infinite linear;
+    }
+  }
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pecularity__img {
+  composes: img;
+  background-image: url('../../images/fundamentals/flag.png');
+  height: 203px;
+  width: 154px;
+  margin: 0 auto;
+}
+
+.methods__img {
+  composes: img;
+  background-image: url('../../images/fundamentals/methods-img.png');
+  width: 391px;
+  height: 377px;
+  position: relative;
+ 
+  &_wrapper {
+    position: relative;
+    top: -1rem;
+  }
+
+  &::before {
+    content: '';
+    background-image: url('../../images/fundamentals/methods-notes.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 100px;
+    height: 128px;
+    position: absolute;
+    left: -80px;
+    bottom: 5%;
+    transform: rotate(40deg);
+  }
+
+  &_content_type_top {
+    font-weight: 800;
+    position: absolute;
+    top: -48px;
+    right: -130px;
+
+    &::before {
+      content: '';
+      background-image: url('../../images/link/arrow-link.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: block;
+      width: 40px;
+      height: 21px;
+      position: absolute;
+      transform: rotate(147deg);
+      bottom: -17px;
+      left: -44px;
+    }
+  }
+
+  &_content_type_bottom {
+    font-weight: 800;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+
+    &::before {
+      content: '';
+      background-image: url('../../images/link/arrow-link.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: block;
+      width: 40px;
+      height: 21px;
+      position: absolute;
+      transform: rotate(331deg);
+      top: -30px;
+      left: 35%;
+    }
+  }
+
+}
+
+.stages {
+  &__list {
+    margin-bottom: 1em;
+    position: relative;
+    top: -1em;
+  }
+
+  &__img {
+    composes: img;
+    background-image: url('../../images/fundamentals/stages-img.png');
+    width: 440px;
+    height: 400px;
+    margin: 0 auto;
+    align-self: flex-start;
+  }
+}
+
+.usage {
+
+  &__item {
+    font-size: var(--header-df-size);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+
+    &::before {
+      content: '';
+      background-image: url('../../images/fundamentals/puzzle-yellow.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 97px;
+      height: 93px;
+      display: block;
+      transform: rotate(37deg);
+      margin-right: 2rem;
+    }
+
+    &:last-of-type {
+      &::before {
+        background-image: url('../../images/fundamentals/puzzle-green.png');
+        width: 101px;
+        height: 82px;
+        transform: rotate(270deg);
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+
+.research {
+  &__img {
+    composes: img;
+    background-image: url('../../images/fundamentals/research-img.png');
+    width: 388px;
+    height: 377px;
+    margin: 0 auto;
+  }
+}
