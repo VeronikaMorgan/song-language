@@ -3,23 +3,24 @@
   --main-text-color: #474444;
   --main-info-color: #F5BF6B;
   --main-highlight-color: #57815F;
-  --header-color: #a5d9a8eb;
-  --header-sm-size: 2rem;
-  --header-df-size: 3rem;
-  --header-lg-size: 4.5rem;
+  --header-color: #a5d9a8;
+  --header-sm-size: 1.6rem;
+  --header-df-size: 2rem;
+  --header-lg-size: 3rem;
   --text-main-size: 1.6rem;
   --text-large-size: 2rem;
 }
+
 @media screen and (min-width: 1800px) {
   :root {
     --main-bg-color: #FFFAE8;
     --main-text-color: #474444;
     --main-info-color: #F5BF6B;
     --main-highlight-color: #57815F;
-    --header-color: #a5d9a8eb;
-    --header-sm-size: 2rem;
-    --header-df-size: 3.5rem;
-    --header-lg-size: 4.5rem;
+    --header-color: #a5d9a8;
+    --header-sm-size: 1.6rem;
+    --header-df-size: 2rem;
+    --header-lg-size: 3.5rem;
     --text-main-size: 2rem;
     --text-large-size: 2rem;
   }
@@ -31,7 +32,7 @@
     --main-text-color: #474444;
     --main-info-color: #F5BF6B;
     --main-highlight-color: #57815F;
-    --header-color: #a5d9a8eb;
+    --header-color: #a5d9a8;
     --header-sm-size: 1.6rem;
     --header-lg-size: 3.6rem;
     --text-main-size: 1.4rem;
@@ -46,6 +47,7 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -59,6 +61,10 @@ h6 {
   font-size: inherit;
   display: block;
   max-width: fit-content;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 .link-default {
@@ -80,7 +86,7 @@ h6 {
   margin: 0 0 2.7em 0;
 }
 
-.text_last{
+.text_last {
   margin-bottom: 0;
 }
 

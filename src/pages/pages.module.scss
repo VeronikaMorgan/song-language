@@ -1,5 +1,7 @@
 .main {
   padding: 100px 200px 100px 200px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .section {
@@ -22,7 +24,7 @@
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1400px) {
   .main {
     padding: 50px 100px 50px 100px;
   }

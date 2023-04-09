@@ -2,12 +2,19 @@ import { FC } from "react";
 import ArrowLink from "../../components/arrow-link/arrow-link";
 import { RIGHT_LINK, LEFT_LINK } from "../../utils/constants";
 import styles from '../pages.module.scss';
+import { motion, useTransform, useScroll } from "framer-motion";
 import fundStyles from './fundamentals.module.scss'
 import InfoBlock from "../../components/info-block/info-block";
 import ListItem from "../../components/list-item/list-item";
+
 const FundamentalsPage: FC = () => {
+  const windowHeight = window.innerHeight
+  const {scrollY} = useScroll()
+  const heights = [windowHeight, 80]
+  const offsetY = [0, 500]
+  const marginTop = useTransform(scrollY, offsetY, offsetY)
   return (
-    <main className={styles.main}>
+    <motion.main className={styles.main} style={{marginTop}}>
       <h1 className={fundStyles.title}>Зачем это нам</h1>
       <section className={styles.section}>
         <div className={styles.section__content}>
@@ -83,7 +90,7 @@ const FundamentalsPage: FC = () => {
         </div>
         <div className={fundStyles.research__img}></div>
       </section>
-    </main>
+    </motion.main>
   )
 }
 
