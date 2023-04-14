@@ -1,7 +1,5 @@
 .item {
   font-size: var(--text-main-size);
-  text-transform: uppercase;
-  margin-bottom: 1em;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -9,19 +7,19 @@
     margin-bottom: 0;
   }
 
-  &_type_yellow {
+  &_type_star {
     &::before {
       content: '';
-      background-image: url('../../images/list-item/yellow.png');
+      background-image: url('../../images/list-item/star.png');
       background-size: cover;
       background-repeat: no-repeat;
       display: block;
-      width: 23px;
-      height: 23px;
+      min-width: 1.6em;
+      min-height: 1.65em;
       margin-right: 1em;
     }
   }
-  &_type_red {
+  &_type_circle {
     &::before {
       content: '';
       background-image: url('../../images/list-item/red.png');

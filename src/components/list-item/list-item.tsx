@@ -1,14 +1,16 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import styles from './list-item.module.scss';
 
 interface IlistItem {
-  text: string
-  color: 'yellow' | 'red'
+  children: React.ReactNode
+  type: 'circle' | 'star'
+  textType: 'upperCase' | 'default'
 }
-const ListItem: FC<IlistItem> = ({text, color}) => {
-  const className = `item_type_${color}`
+const ListItem: FC<IlistItem> = ({children, type, textType}) => {
+  const classNameTypeCircle = `${styles.item_type_circle} ${styles.item}`;
+  const classNameTypeStar = `${styles.item_type_star} ${styles.item}`
   return (
-    <li className={`${styles.item_type_red} ${styles.item}`}>{text}</li>
+    <li className={type === 'circle' ? classNameTypeCircle : classNameTypeStar} style={textType === 'upperCase' ? {textTransform: "uppercase"}: {textTransform: 'none'}}>{children}</li>
   )
 }
 

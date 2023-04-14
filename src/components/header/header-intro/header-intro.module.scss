@@ -1,0 +1,204 @@
+.header {
+  background-color: var(--header-color);
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 0 4rem 4rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0 200px 0 200px;
+  &__wrapper {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem 0 2rem;
+    width: 100%;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__item {
+    font-weight: 600;
+    font-size: inherit;
+    transition: all 0.2s linear;
+    border-bottom: 2px transparent solid;
+    &:hover {
+      color: var(--main-highlight-color);
+      border-color: var(--main-highlight-color);
+    }
+    &_active {
+      composes: header__item;
+      border-bottom: 2px white solid;
+    }
+  }
+
+  &__logo {
+    background-image: url('../../../images/header/logo.svg');
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__title {
+    background-image: url('../../../images/header/main-logo.svg');
+    display: block;
+    width: 686px;
+    height: 321px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 9rem;
+  }
+
+  &__decor_position_left {
+    content: '';
+    background-image: url('../../../images/header/main-img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 460px;
+    height: 460px;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 1rem;
+    display: block;
+  }
+
+  &__decor_position_right {
+    background-image: url('../../../images/header/leaf.svg');
+    display: block;
+    width: 415px;
+    height: 525px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: -150px;
+    right: -150px;
+    z-index: 10;
+    transform: rotate(105deg)
+  }
+
+  &__button {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 600;
+    color: white;
+    background-color: var(--main-highlight-color);
+    padding: 0.7em 1.2em;
+    border-color: rgba(255, 255, 255, 0.944);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 0.7em;
+    transition: background-color 0.4s linear;
+    display: block;
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.597);
+      border-color: var(--main-highlight-color);
+      color: var(--main-highlight-color);
+    }
+
+    &_wrapper {
+      max-width: fit-content;
+      display: block;
+      position: relative;
+
+      // &_type_default {
+      //   position: relative;
+
+      //   &::before {
+      //     content: '';
+      //     background-image: url('../../images/header/btn-wrapper.png');
+      //     background-size: cover;
+      //     background-repeat: no-repeat;
+      //     display: block;
+      //     width: 160px;
+      //     height: 100px;
+      //     top: -10%;
+      //     left: -50%;
+      //     position: absolute;
+      //   }
+      // }
+
+      &_decor {
+        content: '';
+        background-image: url('../../../images/header/btn-wrapper.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: block;
+        width: 236px;
+        height: 142px;
+        top: -15%;
+        left: -60%;
+        position: absolute;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .header {
+    padding: 0 100px 0 100px;
+
+    &__logo {
+      // width: 100px;
+      // height: 100px;
+
+      &_type_default {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+
+  .header__decor_position_left {
+    width: 400px;
+    height: 400px;
+  }
+
+  .header__button_wrapper_decor {
+    width: 160px;
+    height: 100px;
+    top: -10%;
+    left: -50%;
+  }
+
+  .header__main_logo {
+    width: 595px;
+    height: 290px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .header::before {
+    width: 350px;
+    height: 350px;
+  }
+
+  .header__main_logo {
+    width: 445px;
+    height: 215px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .header {
+    padding: 0
+  }
+
+  .header__main_logo {
+    margin-top: 60px;
+    width: 335px;
+    height: 164px;
+  }
+}

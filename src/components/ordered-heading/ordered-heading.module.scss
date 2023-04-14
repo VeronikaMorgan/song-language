@@ -1,0 +1,21 @@
+.wrapper {
+  max-height: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+}
+
+.heading {
+  font-size: var(--header-df-size);
+  font-weight: 600;
+  line-height: 1.5;
+  max-width: 300px;
+}
+
+.number {
+  display: block;
+  font-size: 4em;
+  font-weight: 500;
+  max-height: 4em;
+}

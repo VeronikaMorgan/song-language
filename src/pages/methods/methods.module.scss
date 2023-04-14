@@ -1,0 +1,133 @@
+.img {
+  content: '';
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+
+.basics_img {
+  background-image: url('../../images/methods/basics-img.png');
+  width: 455px;
+  height: 440px;
+}
+
+.absence {
+  &__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    &_item {
+      margin-left: 3em;
+      font-size: var(--header-df-size);
+      font-weight: 500;
+      z-index: 1;
+    }
+
+    &::before {
+      content: "отсутствие";
+      transform: rotate(270deg);
+      display: block;
+      font-weight: 700;
+      font-size: var(--header-lg-size);
+      position: absolute;
+      left: -2.7em;
+      top: 35%;
+      z-index: 1;
+    }
+
+    &::after {
+      content: '';
+      background-image: url('../../images/methods/absence-img.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+      width: 180px;
+      height: 125px;
+      position: absolute;
+      opacity: 0.5;
+      left: -20%;
+    }
+  }
+}
+
+
+.interfere{
+  margin-right: 16rem;
+  position: relative;
+  &__girl{
+      composes: img;
+      background-image: url('../../images/methods/interfere-girl.png');
+      transform: scale(-1,1);
+      width: 257px;
+      height: 255px;
+  }
+  &__plus {
+    composes: img;
+    background-image: url('../../images/methods/interfere-plus.png');
+    width: 500px;
+    height: 380px;
+    margin-right: 3em;
+    @media screen and (max-width: 1600px){
+      width: 450px;
+      height: 330px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 40%;
+  }
+  &__wrapper_content_minus{
+      composes:interfere__wrapper;
+      position: relative;
+      margin: 1em auto 0 auto;
+
+      &::before{
+         content: ""; 
+         background-image: url('../../images/methods/interfere-boy.png');
+         background-size: cover;
+         width: 257px;
+         height: 255px;
+         display: block;
+         position: absolute;
+         left: -250px;
+         top:10%;
+         z-index: -1;
+      }
+  }
+  &__heading{
+      color: var(--main-highlight-color);
+      font-size: var(--header-lg-size);
+  }
+  // &__wrapper{
+  //     margin-left: 16rem;
+  //     margin-top: 6rem;
+  //     display: flex;
+  //     justify-content: space-between;
+  //     align-items: center;
+  //     &>img{
+  //         width: 40%;
+  //         height: 50%;
+  //     }
+  // }
+  &__content-plus{
+      max-width: 40%;
+  }
+  &__outcome{
+      margin-left: 16rem;
+      margin-top: 6rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      &>p{
+          max-width: 50%;
+      }
+  }
+  &__flag{
+   composes: pecularity__img from '../fundamentals/fundamentals.module.scss';
+  }
+ 
+}

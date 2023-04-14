@@ -1,0 +1,28 @@
+.title {
+  color: var(--main-highlight-color);
+  font-size: 4.8rem;
+  font-weight: 800;
+  display: flex;
+  align-items: baseline;
+
+  &::after {
+    content: '';
+    background-image: url('../../images/fundamentals/question-mark.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 61px;
+    height: 111px;
+    display: block;
+    transform: rotate(15deg);
+  }
+}
+
+@media screen and (max-width: 1600px){
+  .title {
+    font-size: 4rem;
+    &::after {
+      width: 44px;
+      height: 80px;
+    }
+  }
+}

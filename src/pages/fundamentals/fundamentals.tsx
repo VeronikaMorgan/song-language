@@ -1,21 +1,29 @@
 import { FC } from "react";
 import ArrowLink from "../../components/arrow-link/arrow-link";
+import { useAnimationContext } from "../../components/animated-route/animated-route";
 import { RIGHT_LINK, LEFT_LINK } from "../../utils/constants";
 import styles from '../pages.module.scss';
-import { motion, useTransform, useScroll } from "framer-motion";
-import fundStyles from './fundamentals.module.scss'
+import { motion, useTransform, MotionValue } from "framer-motion";
+import fundStyles from './fundamentals.module.scss';
+
+import Title from "../../components/title/title";
 import InfoBlock from "../../components/info-block/info-block";
 import ListItem from "../../components/list-item/list-item";
 
+
+interface FundamentalsPageProps {
+  scrollY: MotionValue<number>
+  offsetY: number[]
+  showAnimation: boolean
+}
+
 const FundamentalsPage: FC = () => {
-  const windowHeight = window.innerHeight
-  const {scrollY} = useScroll()
-  const heights = [windowHeight, 80]
-  const offsetY = [0, 500]
+  const {showAnimation, scrollY, offsetY} = useAnimationContext()
+
   const marginTop = useTransform(scrollY, offsetY, offsetY)
   return (
-    <motion.main className={styles.main} style={{marginTop}}>
-      <h1 className={fundStyles.title}>Зачем это нам</h1>
+    <motion.main className={styles.main} style={{marginTop : showAnimation ? marginTop : undefined}}>
+      <Title text="Зачем это нам"/>
       <section className={styles.section}>
         <div className={styles.section__content}>
           <p className="text text_type_main">С&nbsp;каждым годом потребность общества в&nbsp;овладении иностранными языками стремительно растет.</p>
@@ -62,9 +70,9 @@ const FundamentalsPage: FC = () => {
           <p className="text text_type_main">На&nbsp;первый взгляд, работа с&nbsp;песенным материалом имеет много общего с&nbsp;работой над аудированием и&nbsp;так&nbsp;же подразделяется на&nbsp;3&nbsp;основных этапа -
           </p>
           <ul className={`${fundStyles.stages__list} list-default`}>
-            <ListItem text='предтекстовый' color="red" />
-            <ListItem text='текстовый' color="red" />
-            <ListItem text='послетекстовый' color="red" />
+            <ListItem type="circle" textType="upperCase"><p>предтекстовый</p></ListItem>
+            <ListItem type="circle" textType="upperCase"><p>текстовый</p></ListItem>
+            <ListItem type="circle" textType="upperCase"><p>послетекстовый</p></ListItem>
           </ul>
           <p className="text text_type_main text_last">В&nbsp;то&nbsp;же время эффективное использование данного методического средства предполагает более обширный спектр работ и&nbsp;может включать средства языковой наглядности в&nbsp;виде видеоклипа или lyrics-видео, что позволяет нам расширить трех-шаговую систему.</p>
           <ArrowLink to='usage' text="Этапы работы с песней" type={LEFT_LINK} />

@@ -1,0 +1,87 @@
+.main_slider {
+  min-height: 300px;
+  max-width: 50%;
+  background-color: #dbdbdb30;
+  border-radius: 1.7rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.138);
+  position: relative;
+  padding: 4rem 4.68rem 4rem 4.68rem;
+
+  &::before {
+    content: '';
+    background-image: url('../../../images/slider/rules-slider-decor.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    height: 17.5rem;
+    width: 8rem;
+    transform: rotate(322deg);
+    position: absolute;
+    top: -60px;
+    right: -20px;
+  }
+
+  &::after {
+    content: '';
+    background-image: url('../../../images/slider/rules-slider-decor.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    height: 17.5rem;
+    width: 8rem;
+    transform: rotate(141deg);
+    position: absolute;
+    bottom: -60px;
+    left: -30px;
+  }
+  &_button_left {
+    content: '';
+    background-image: url('../../../images/slider/rules-slider-arrow.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    width: 57px;
+    height: 45px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    transform: rotate(184deg);
+    @media screen and (max-width: 1600px) {
+    width: 45px;
+    height: 35px;
+    }
+  }
+  &_button_right {
+    content: '';
+    background-image: url('../../../images/slider/rules-slider-arrow.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    width: 57px;
+    height: 45px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    @media screen and (max-width: 1600px) {
+      width: 45px;
+      height: 35px;
+      }
+  }
+
+
+  &__container {
+    overflow: hidden;
+    max-height: 100%;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+}
