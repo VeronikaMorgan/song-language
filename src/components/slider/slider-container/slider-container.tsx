@@ -12,7 +12,7 @@ interface ISliderContainerProps {
 const SliderContainer: FC<ISliderContainerProps> = ({ children, width, height }) => {
 
   const [activeSlideIndex, setActiveSlideIndex] = useState<number>(0)
-  const [direction, setDirection] = useState<'prev' | 'next'>()
+  const [direction, setDirection] = useState<'prev' | 'next'>('next')
   const slidesIndexes = React.Children.count(children) - 1
 
   const handleNextSlide = () => {

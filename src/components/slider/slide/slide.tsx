@@ -19,7 +19,9 @@ export const nextSlideAnimation = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.8,
+      type: 'spring',
+      bounce: 0.3
     }
   }
 }
@@ -33,7 +35,9 @@ export const prevSlideAnimation = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.8,
+      type: 'spring',
+      bounce: 0.3
     }
   }
 }
