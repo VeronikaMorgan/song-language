@@ -131,3 +131,64 @@
   }
  
 }
+
+.slider_descr {
+  flex-basis: 35%;
+}
+
+.material_img_first{
+  composes: img;
+  background-image: url('../../images/methods/material-first.png');
+  width: 400px;
+  height: 400px;
+}
+.material_img_second{
+  composes: img;
+  background-image: url('../../images/methods/material-second.png');
+  width: 380px;
+  height: 380px;
+  position: relative;
+  &::after {
+    content: '';
+    background-image: url('../../images/methods/material-second-speaker.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    width: 135px;
+    height: 85px;
+    right: -60px;
+    bottom: -100px;
+    transform: scaleX(-1)
+
+  }
+  &::before {
+    content: '';
+    background-image: url('../../images/methods/material-second-notes.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    height: 490px;
+    width: 430px;
+    top: -120px;
+  }
+}
+
+.functions {
+  &__img {
+    composes: img;
+    background-image: url('../../images/methods/function-img.png');
+    width: 1455px;
+    height: 272px;
+    flex-basis: 52%;
+    @media screen and (max-width: 1280px) {
+      height: 220px;
+    }
+  }
+  &__wrapper {
+    flex-basis: 40%;
+    position: relative;
+    top: 1.3em;
+  }
+}

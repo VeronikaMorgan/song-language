@@ -7,9 +7,10 @@ interface ISliderContainerProps {
   children: React.ReactNode
   width?: string
   height?: string
+  maxWidth?: string
 }
 
-const SliderContainer: FC<ISliderContainerProps> = ({ children, width, height }) => {
+const SliderContainer: FC<ISliderContainerProps> = ({ children, width, height, maxWidth }) => {
 
   const [activeSlideIndex, setActiveSlideIndex] = useState<number>(0)
   const [direction, setDirection] = useState<'prev' | 'next'>('next')
@@ -28,7 +29,7 @@ const SliderContainer: FC<ISliderContainerProps> = ({ children, width, height })
   const activeSlide = React.Children.toArray(children)[activeSlideIndex] as React.ReactElement
 
   return (
-    <div className={sliderStyles.main_slider} style={{ minWidth: width ? width : undefined, height: height ? height : undefined }}>
+    <div className={sliderStyles.main_slider} style={{ maxWidth: maxWidth ? maxWidth : undefined, width: width ? width : undefined, height: height ? height : undefined }}>
       <div className={sliderStyles.main_slider__container}>
         <button className={sliderStyles.main_slider_button_left} onClick={handlePrevSlide}></button>
         <button className={sliderStyles.main_slider_button_right} onClick={handleNextSlide}></button>

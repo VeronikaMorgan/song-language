@@ -7,7 +7,7 @@ import styles from './methods-slider-lg.module.scss';
 
 const MethodsSliderLg: FC = () => {
   return (
-    <SliderContainer height="65vh">
+    <SliderContainer height="66vh" maxWidth="42%">
       <Slide title="Принцип сопоставления" type={SLIDER_LG}>
         <p className="text text_type_sm">При сопоставлении языковых систем, введении различных языковых опор происходит облегчение 
           и ускорение запоминания языкового материала, тем самым весь процесс обучения становится легче. 
