@@ -1,47 +1,6 @@
-// .function {
-//   &__wrapper {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-
-//     &>img {
-//       max-width: 50%;
-//     }
-
-//     & p {
-//       flex-basis: 35%;
-//       text-align: start;
-//       margin-top: 2.5rem;
-//       position: relative;
-
-//       &::after {
-//         content: "";
-//         background-image: url('../images/second-lang-img/link-arrow.png');
-//         background-size: cover;
-//         background-repeat: no-repeat;
-//         width: 62px;
-//         height: 33px;
-//         display: block;
-//         position: absolute;
-//         right: -15%;
-//         top: 50%;
-//         transform: rotate(347deg)scale(1, -1);
-
-//       }
-
-//     }
-//   }
-
-//   &__cards {
-//     margin-top: 10rem;
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr;
-//     column-gap: 6rem;
-//     max-height: 36rem;
-
-//   }
-
 .card {
+  display: flex;
+  flex-direction: column;
   border: 3px solid;
   border-color: #B85953;
   border-radius: 2.7rem;
@@ -57,12 +16,6 @@
     font-size: inherit;
     font-weight: 700;
     margin: 0 auto 1.5em auto;
-  }
-  &__wrapper {
-    overflow: hidden;
-    max-width: 100%;
-    max-height: 100%;
-    overflow-y: scroll;
   }
 }
 
@@ -150,4 +103,4 @@
 //   }
 
 
-// }
+// 

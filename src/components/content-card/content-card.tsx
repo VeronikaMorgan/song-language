@@ -11,12 +11,12 @@ interface IContentCard {
 const ContentCard: FC<IContentCard> = ({ children, width, height, color, title }) => {
   return (
     <div className={cardStyles.card} style={{ width: width ? width : 'fit-content', height: height ? height : '50%', borderColor: color ? `var(${color})` : 'inherit' }}>
-      <div className={cardStyles.card__wrapper}>
+      {/* <div> */}
         {title &&
           <h2 className={cardStyles.card__heading} style={{ color: color ? `var(${color})` : 'inherit' }}>{title}</h2>
         }
         {children}
-      </div>
+      {/* </div> */}
     </div>
   )
 }
