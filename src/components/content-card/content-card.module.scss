@@ -1,0 +1,153 @@
+// .function {
+//   &__wrapper {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+
+//     &>img {
+//       max-width: 50%;
+//     }
+
+//     & p {
+//       flex-basis: 35%;
+//       text-align: start;
+//       margin-top: 2.5rem;
+//       position: relative;
+
+//       &::after {
+//         content: "";
+//         background-image: url('../images/second-lang-img/link-arrow.png');
+//         background-size: cover;
+//         background-repeat: no-repeat;
+//         width: 62px;
+//         height: 33px;
+//         display: block;
+//         position: absolute;
+//         right: -15%;
+//         top: 50%;
+//         transform: rotate(347deg)scale(1, -1);
+
+//       }
+
+//     }
+//   }
+
+//   &__cards {
+//     margin-top: 10rem;
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     column-gap: 6rem;
+//     max-height: 36rem;
+
+//   }
+
+.card {
+  border: 3px solid;
+  border-color: #B85953;
+  border-radius: 2.7rem;
+  box-sizing: border-box;
+  padding: 3rem;
+  padding-bottom: 4rem;
+  padding-right: 2rem;
+  background-color: #dbdbdb30;
+  // text-align: justify;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.091);
+
+  &__heading {
+    font-size: inherit;
+    font-weight: 700;
+    margin: 0 auto 1.5em auto;
+  }
+  &__wrapper {
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-y: scroll;
+  }
+}
+
+//   &__card-text {
+
+//     max-height: 90%;
+//     overflow-y: scroll;
+//     margin-top: 2rem;
+//     margin-bottom: 3rem;
+//     padding-right: 1rem;
+
+//     &::-webkit-scrollbar {
+//       width: 0.5rem;
+//     }
+
+//     &::-webkit-scrollbar-track {
+//       background-color: rgb(219 219 219 / 22%);
+//       border-radius: 1rem;
+//       height: 3rem;
+
+//     }
+
+//     &::-webkit-scrollbar-thumb {
+//       background-color: #B85953;
+//       border-radius: 1rem;
+
+//       &:hover {
+//         background-color: #a3514b
+//       }
+//     }
+
+//     &>p {
+//       margin: 2rem 0 2rem 0;
+
+//       &:first-child {
+//         margin-top: 0;
+//       }
+
+//       &>span {
+//         font-weight: 500;
+//         font-size: 1.5rem;
+//         line-height: normal;
+//       }
+//     }
+//   }
+
+//   &__card-heading {
+//     font-size: 1.5rem;
+//     font-weight: 700;
+//     color: #B85953;
+//     text-align: center;
+
+//   }
+
+//   &__second-card {
+//     border-color: #F5BF6B;
+
+//     &>.function__card-heading {
+//       color: #F5BF6B;
+//     }
+
+//     &>.function__card-text::-webkit-scrollbar-thumb {
+//       background-color: #F5BF6B;
+
+//       &:hover {
+//         background-color: #ebaf4e;
+//       }
+//     }
+//   }
+
+//   &__third-card {
+//     border-color: #AEDDB1;
+
+//     &>.function__card-heading {
+//       color: #AEDDB1;
+//     }
+
+//     &>.function__card-text::-webkit-scrollbar-thumb {
+//       background-color: #AEDDB1;
+
+//       &:hover {
+//         background-color: #8ec292;
+//       }
+//     }
+//   }
+
+
+// }

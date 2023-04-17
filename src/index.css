@@ -4,6 +4,9 @@
   --main-info-color: #F5BF6B;
   --main-highlight-color: #57815F;
   --header-color: #a5d9a8;
+  --content-color-red: #B85953;
+  --content-color-light-green: #a5d9a8;
+  --content-color-yellow: #F5BF6B;
   --header-sm-size: 1.6rem;
   --header-df-size: 2rem;
   --header-lg-size: 3.5rem;
@@ -14,11 +17,6 @@
 
 @media screen and (min-width: 1800px) {
   :root {
-    --main-bg-color: #FFFAE8;
-    --main-text-color: #474444;
-    --main-info-color: #F5BF6B;
-    --main-highlight-color: #57815F;
-    --header-color: #a5d9a8;
     --header-sm-size: 1.6rem;
     --header-df-size: 2rem;
     --header-lg-size: 3.5rem;
@@ -30,11 +28,6 @@
 
 @media screen and (max-width: 1280px) {
   :root {
-    --main-bg-color: #FFFAE8;
-    --main-text-color: #474444;
-    --main-info-color: #F5BF6B;
-    --main-highlight-color: #57815F;
-    --header-color: #a5d9a8;
     --header-sm-size: 1.6rem;
     --header-lg-size: 3.6rem;
     --text-main-size: 1.4rem;
@@ -120,7 +113,7 @@ button {
 }
 
 .text_type_accented {
-  font-size: 3.5rem;
+  font-size: 1.5em;
   font-weight: 500;
 }
 .text_inline-start {
