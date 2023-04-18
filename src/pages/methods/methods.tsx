@@ -6,6 +6,7 @@ import Title from "../../components/title/title";
 import InfoBlock from "../../components/info-block/info-block";
 import OrderedHeading from "../../components/ordered-heading/ordered-heading";
 import MethodsSliderLg from "../../components/methods-sliders/methods-slider_lg/methods-slider-lg";
+import MethodsSliderSm from "../../components/methods-sliders/methods-slider_sm/methods-slider-sm";
 import ContentCard from "../../components/content-card/content-card";
 import ScrollArea from "../../components/scroll-area/scroll-area";
 import styles from '../pages.module.scss';
@@ -17,23 +18,23 @@ const MethodsPage: FC = () => {
     <motion.main className={styles.main} style={{ marginTop: showAnimation ? marginTop : undefined }}>
       <Title text="Что лежит в основе" />
       <section className={`${styles.section} ${styles.section_type_sm}`}>
-        <OrderedHeading text="Особенности преподавания второго иностранного языка" number={1} />
-      </section>
-      <section className={`${styles.section} ${styles.section_type_sm}`}>
-        <div className={styles.section__content}>
-          <p className="text text_type_main">В системе современного школьного образования можно наблюдать тенденцию
-            мультилингвального или многоязычного обучения. Многие школы включают в учебный план второй или
-            даже третий иностранный язык. </p>
-          <p className="text">Сразу следует отметить огромный потенциал многоязычного образования для развития как
-            учебных, так и личностных способностей обучаемого. Происходит развитие и совершенствование
-            лингвистических навыков, развитие когнитивных способностей, вербального интеллекта, памяти,
-            языковой рефлексии и догадки.</p>
-          <p className="text text_last">Несмотря на явные плюсы мультилингвального обучения, на данном этапе развития
-            школьного образования полная реализация его потенциала довольно затруднительна.</p>
+        <OrderedHeading text="Особенности преподавания второго иностранного языка" number={1} className={styles.section__heading} />
+        <div className={styles.section__flex}>
+          <div className={styles.section__content}>
+            <p className="text text_type_main">В системе современного школьного образования можно наблюдать тенденцию
+              мультилингвального или многоязычного обучения. Многие школы включают в учебный план второй или
+              даже третий иностранный язык. </p>
+            <p className="text">Сразу следует отметить огромный потенциал многоязычного образования для развития как
+              учебных, так и личностных способностей обучаемого. Происходит развитие и совершенствование
+              лингвистических навыков, развитие когнитивных способностей, вербального интеллекта, памяти,
+              языковой рефлексии и догадки.</p>
+            <p className="text text_last">Несмотря на явные плюсы мультилингвального обучения, на данном этапе развития
+              школьного образования полная реализация его потенциала довольно затруднительна.</p>
+          </div>
+          <div className={methodsStyles.basics_img}></div>
         </div>
-        <div className={methodsStyles.basics_img}></div>
       </section>
-      <section className={`${styles.section} ${styles.section_align_baseline}`}>
+      <section className={`${styles.section} ${styles.section_align_baseline} ${styles.section__flex}`}>
         <div className={styles.section__content}>
           <ul className={`${methodsStyles.absence__list} list-default`}>
             <li className={methodsStyles.absence__list_item}> методического обеспечения</li>
@@ -47,7 +48,7 @@ const MethodsPage: FC = () => {
             интерференция и&nbsp;положительный перенос, влияющие на&nbsp;усвоение материала</p>
         </div>
       </section>
-      <section className={`${styles.section} ${styles.section_align_start}`}>
+      <section className={`${styles.section} ${styles.section__flex} ${styles.section__flex_align_start}`}>
         <div className={styles.section__content}>
           <div className={methodsStyles.interfere__girl}></div>
         </div>
@@ -62,7 +63,7 @@ const MethodsPage: FC = () => {
             (вопрос – la domanda)</p>
         </div>
       </section>
-      <section className={`${styles.section} ${styles.section_type_sm}`}>
+      <section className={`${styles.section} ${styles.section_type_sm} ${styles.section__flex}`}>
         <div className={`${styles.section__content} ${methodsStyles.interfere__wrapper}`}>
           <h2 className={methodsStyles.interfere__heading}> Положительный перенос</h2>
           <InfoBlock>
@@ -75,7 +76,7 @@ const MethodsPage: FC = () => {
         </div>
         <div className={methodsStyles.interfere__plus}></div>
       </section>
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.section__flex}`}>
         <MethodsSliderLg />
         <div className={methodsStyles.slider_descr}>
           <p className="text text_type_main">Наукометрический анализ мнений исследователей, характеризующих особенности овладения ИЯ2,
@@ -84,27 +85,27 @@ const MethodsPage: FC = () => {
         </div>
       </section >
       <section className={styles.section}>
-        <OrderedHeading text="Песня как методическое средство в обучении иностранному языку" number={2} />
-      </section>
-      <section className={`${styles.section} ${styles.section_type_sm}`}>
-        <div className={methodsStyles.material_img_first}></div>
-        <div className={styles.section__content}>
-          <p className="text text_type_main">Песня является ценнейшим учебным материалом, многофункциональным методическим средством.
-            Многие ученые отмечают эффективность данного средства для формирования дополнительной мотивации учащихся,
-            что считается довольно трудной задачей.</p>
-          <p className="text text_type_main"><span className="text_type_accented">Ф. Херцберг</span> в своих исследованиях по психологии мотивации в сфере методики преподавания иностранных языков подчеркивает,
-            что для достижения устойчивых результатов в обучении, большое значение имеет внутренняя мотивация ученика,
-            связанная с удовольствием и проявлением любознательности.  Невозможно овладеть языком без мотивации, которая имеет три источника:
-            потребность, обязанность и удовольствие
-          </p>
-          <p className="text">Работа с песней представляет собой новый и разнообразный вид деятельности, что стимулирует не только заинтересованность учеников,
-            но и способствует процессу обучения. </p>
-          <p className="text text_type_main"><span className="text_type_accented">Паоло Бальбони</span> уверен что, новизна — это механизм оценки (позитивной оценки),
-            который вызывает возбуждение (положительную реакцию) и создает мотивацию и отсутствие эмоциональных барьеров.
-          </p>
+        <OrderedHeading text="Песня как методическое средство в обучении иностранному языку" number={2} className={styles.section__heading} />
+        <div className={styles.section__flex}>
+          <div className={methodsStyles.material_img_first}></div>
+          <div className={styles.section__content}>
+            <p className="text text_type_main">Песня является ценнейшим учебным материалом, многофункциональным методическим средством.
+              Многие ученые отмечают эффективность данного средства для формирования дополнительной мотивации учащихся,
+              что считается довольно трудной задачей.</p>
+            <p className="text text_type_main"><span className="text_type_accented">Ф. Херцберг</span> в своих исследованиях по психологии мотивации в сфере методики преподавания иностранных языков подчеркивает,
+              что для достижения устойчивых результатов в обучении, большое значение имеет внутренняя мотивация ученика,
+              связанная с удовольствием и проявлением любознательности.  Невозможно овладеть языком без мотивации, которая имеет три источника:
+              потребность, обязанность и удовольствие
+            </p>
+            <p className="text">Работа с песней представляет собой новый и разнообразный вид деятельности, что стимулирует не только заинтересованность учеников,
+              но и способствует процессу обучения. </p>
+            <p className="text text_type_main"><span className="text_type_accented">Паоло Бальбони</span> уверен что, новизна — это механизм оценки (позитивной оценки),
+              который вызывает возбуждение (положительную реакцию) и создает мотивацию и отсутствие эмоциональных барьеров.
+            </p>
+          </div>
         </div>
       </section>
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.section__flex}`}>
         <div className={styles.section__content}>
           <p className="text text_type_main">Структура песни (цикличная музыкальная тема, повторяющийся текст) стимулирует неосознанное глубокое запоминание языкового материала,
             что является основным преимуществом песни, как методического средства в обучении ИЯ. </p>
@@ -119,7 +120,7 @@ const MethodsPage: FC = () => {
         </div>
         <div className={methodsStyles.material_img_second}></div>
       </section>
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.section__flex}`}>
         <div className={methodsStyles.functions__img}></div>
         <div className={methodsStyles.functions__wrapper}>
           <p className="text text_type_main text_last"><span className="text_type_accented">Г. Блелль и К.Хельвинг</span> <br></br> в своих работах о связи иностранного языка и искусства, выделяют следующие основные функции музыки,
@@ -127,7 +128,7 @@ const MethodsPage: FC = () => {
           </p>
         </div>
       </section>
-      <section className={`${styles.section} ${methodsStyles.functions__cards}`}>
+      <section className={`${styles.section} ${styles.section__flex} ${methodsStyles.functions__cards}`}>
         <ContentCard color='--content-color-red' title="Обучающая" height="55vh">
           <ScrollArea width="10px" trackColor='--content-color-grey' thumbColor="--content-color-red">
             <p className="text text_type_sm"><span className="text_type_accented">Музыка</span> — это форма искусства, присутствующая во всем мире и разделяемая людьми разных культур,
@@ -182,8 +183,48 @@ const MethodsPage: FC = () => {
           </ScrollArea>
         </ContentCard>
       </section>
-      <section className={styles.section}>
-       
+      <section className={`${styles.section} ${styles.section__flex}`}>
+        <div className={styles.section__content}>
+          <OrderedHeading text="Критерии отбора материала при работе с песней" number={3} className={styles.section__heading} />
+          <p className="text text_type_main">Несомненно, при работе с песней, большое значение имеет отбор материала.
+            Выбор упражнений и методических приемов при работе с песней определяется следующими факторами:
+            целью занятия, темой занятия, объемом знаний учащихся, возрастом и этапом обучения.
+          </p>
+          <p className="text text_type_main">Говоря о старшем школьном возрасте, отдельно стоит упомянуть возрастной критерий
+            при отборе песенного материала. Отдать предпочтение стоит всемирно известным классическим произведениям,
+            включенным в топы Billboard и Rolling Stone или хитам, популярным среди учеников на данный момент.
+            Песня должна обладать ярко выраженной ритмико-мелодической доступностью, что делает музыкальную часть понятной,
+            способной хорошо взаимодействовать с вербальной частью.
+          </p>
+        </div>
+        <div className={methodsStyles.criteria__img}></div>
+      </section>
+      <section className={`${styles.section} ${styles.section_type_sm} ${styles.section__flex}`}>
+        <div className={styles.section__content}>
+          <p className={methodsStyles.criteria__slider__descr}>Мы выделяем следующие <br></br> критерии отбора песен:</p>
+        </div>
+        <MethodsSliderSm />
+      </section >
+      <section className={`${styles.section} ${styles.section_type_sm} ${styles.section__flex}`}>
+        <div className={styles.section__content}>
+          <p className="text text_type_main">Содержание песни должно гармонично интегрироваться с темами,
+            затронутыми в классе. Не следует вводить на занятиях материал «только по пятницам» или в канун праздников,
+            и, наоборот, нецелесообразно систематически вставлять песни в недельное расписание.
+          </p>
+          <p className="text text_type_main">Работа с песней должна начинаться с подготовительного этапа.
+            Учитель рассказывает об исполнителе, предлагает ученикам предположить жанр, основную тему по ее названию.
+            Благодаря данному шагу, и коммуникации, который он предполагает, ученики включаются в работу,
+            появляется интерес к дальнейшему прослушиванию.</p>
+          <p className="text text_type_main">Зарубежные исследователи предлагают посвящать песням 10% от общего количества часов,
+            что в cреднем эквивалентно 6-7 песням с одним часом работы над каждым
+            дальнейшим выполнением домашнего задания</p>
+          <InfoBlock>
+            <p>Для лучшего усвоения нового материала, особенно на начальном этапе,
+              следует использовать подкрепляющий визуальный материал – клип или lyric версия данной песни
+            </p>
+          </InfoBlock>
+        </div>
+        <div className={methodsStyles.criteria__time}></div>
       </section>
     </motion.main>
   )

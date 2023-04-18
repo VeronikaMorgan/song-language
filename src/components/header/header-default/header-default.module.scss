@@ -29,7 +29,7 @@
     font-size: inherit;
     transition: all 0.2s linear;
     border-bottom: 2px transparent solid;
-    font-size: var(--header-sm-size);
+    font-size: var(--heading-sm-size);
 
     &:hover {
       color: var(--main-highlight-color);
@@ -52,7 +52,7 @@
   }
 
   &__button {
-    font-size: var(--header-sm-size);
+    font-size: var(--heading-sm-size);
     font-family: inherit;
     font-weight: 600;
     color: white;

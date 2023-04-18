@@ -24,7 +24,7 @@ const FundamentalsPage: FC = () => {
   return (
     <motion.main className={styles.main} style={{marginTop : showAnimation ? marginTop : undefined}}>
       <Title text="Зачем это нам"/>
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.section__flex}`}>
         <div className={styles.section__content}>
           <p className="text text_type_main">С&nbsp;каждым годом потребность общества в&nbsp;овладении иностранными языками стремительно растет.</p>
           <p className="text text_type_main">Изменившийся запрос общества диктует существенные изменения в&nbsp;системе образования&nbsp;&mdash; появились новые методики и&nbsp;средства обучения, способные облегчить и&nbsp;интенсифицировать образовательный процесс.</p>
@@ -34,7 +34,7 @@ const FundamentalsPage: FC = () => {
         </div>
         <div className={fundStyles.intro__img}></div>
       </section>
-      <section className={`${styles.section} ${styles.section_type_big}`}>
+      <section className={`${styles.section} ${styles.section_type_big} ${styles.section__flex}`}>
         <div className={fundStyles.integration__img}></div>
         <div className={styles.section__content}>
           <p className='text text_type_main'><span className="text_type_accented">Интегрирование </span>песенного материала в&nbsp;процесс обучения способствует формированию социокультурной компетенции учащихся, воспитанию уважительного отношения к&nbsp;культурам и&nbsp;народам и&nbsp;поддержанию устойчивого интереса к&nbsp;дальнейшему овладению языком, что является важнейшей задачей на&nbsp;пути к&nbsp;развитию толерантного общества.</p>
@@ -45,7 +45,7 @@ const FundamentalsPage: FC = () => {
           </InfoBlock>
         </div>
       </section>
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.section__flex}`}>
         <div className={styles.section__content}>
           <p className="text text_type_main">В&nbsp;старшем школьном возрасте на&nbsp;первое место выходит учебно-профессиональная деятельность, в&nbsp;ходе которой активизируется процесс самопознания, вырабатываются нравственные идеалы, формируется мировоззрение и&nbsp;профессиональные интересы.</p>
           <p className="text text_type_main text_last">Ключевые особенности развития личности на&nbsp;данном этапе, следует учитывать при составлении программы обучения иностранному языку, особенно в&nbsp;сфере с&nbsp;уклоном на&nbsp;мультилингвальное образование.</p>
@@ -53,7 +53,7 @@ const FundamentalsPage: FC = () => {
         </div>
         <div className={fundStyles.pecularity__img}></div>
       </section>
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.section__flex}`}>
         <div className={fundStyles.methods__img_wrapper}>
           <span className={`${fundStyles.methods__img_content} ${fundStyles.methods__img_content_type_top}`}>преподаватель</span>
           <div className={fundStyles.methods__img}></div>
@@ -65,7 +65,7 @@ const FundamentalsPage: FC = () => {
           <ArrowLink to='usage' text="Песня как методическое средство" type={RIGHT_LINK} />
         </div>
       </section>
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.section__flex}`}>
         <div className={styles.section__content}>
           <p className="text text_type_main">На&nbsp;первый взгляд, работа с&nbsp;песенным материалом имеет много общего с&nbsp;работой над аудированием и&nbsp;так&nbsp;же подразделяется на&nbsp;3&nbsp;основных этапа -
           </p>
@@ -79,7 +79,7 @@ const FundamentalsPage: FC = () => {
         </div>
         <div className={fundStyles.stages__img}></div>
       </section>
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.section__flex}`}>
         <div className={styles.section__content}>
           <ul className="list-default">
             <li className={fundStyles.usage__item}>семантический</li>
@@ -91,7 +91,7 @@ const FundamentalsPage: FC = () => {
           <p className="text text_type_main text_last">Данная методика состоит из&nbsp;5&nbsp;этапов и&nbsp;включает в&nbsp;себя два полных прослушивания песни, каждый из&nbsp;которых отвечает за&nbsp;работу с&nbsp;определённым слоем, служащим для выполнения конкретных задач, поставленных учителем иностранного языка.</p>
         </div>
       </section>
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.section__flex}`}>
         <div className={styles.section__content}>
           <p className="text text_type_main text_last">Экспериментальное обучение, проведенное на&nbsp;базе данной методики продемонстрировала ее&nbsp;эффективность. У&nbsp;экспериментальной группы оценки за&nbsp;выполнение заданий, четко направленных на&nbsp;демонстрацию речевых навыков значительно возрасло, мы&nbsp;можем наблюдать существенную динамику роста лексико&nbsp;&mdash; грамматических навыков.</p>
           <ArrowLink to='efficiency' text="Практическое примененией" type={LEFT_LINK} />

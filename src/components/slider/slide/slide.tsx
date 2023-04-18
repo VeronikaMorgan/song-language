@@ -9,6 +9,7 @@ interface ISlideProps {
   title: string
   children: React.ReactNode
   direction?: 'next' | 'prev'
+  className?: string
 }
 export const nextSlideAnimation = {
   hidden: {
@@ -42,10 +43,10 @@ export const prevSlideAnimation = {
   }
 }
 
-const Slide: FC<ISlideProps> = ({ title, type, children, direction }) => {
+const Slide: FC<ISlideProps> = ({ title, type, children, direction, className }) => {
 
   return (
-    <motion.div className={slideStyles.wrapper} variants={direction === 'next' ? nextSlideAnimation : prevSlideAnimation} animate="show" initial='hidden'>
+    <motion.div className={`${slideStyles.wrapper} ${className}`} variants={direction === 'next' ? nextSlideAnimation : prevSlideAnimation} animate="show" initial='hidden'>
       <h2 className={type === SLIDER_LG ? slideStyles.title_type_lg : slideStyles.title_type_sm }>{title}</h2>
       {children}
     </motion.div>

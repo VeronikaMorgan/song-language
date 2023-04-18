@@ -56,6 +56,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 9rem;
+    position: relative;
   }
 
   &__decor_position_left {
@@ -112,23 +113,6 @@
       max-width: fit-content;
       display: block;
       position: relative;
-
-      // &_type_default {
-      //   position: relative;
-
-      //   &::before {
-      //     content: '';
-      //     background-image: url('../../images/header/btn-wrapper.png');
-      //     background-size: cover;
-      //     background-repeat: no-repeat;
-      //     display: block;
-      //     width: 160px;
-      //     height: 100px;
-      //     top: -10%;
-      //     left: -50%;
-      //     position: absolute;
-      //   }
-      // }
 
       &_decor {
         content: '';

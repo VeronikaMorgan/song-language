@@ -18,6 +18,8 @@ const HeaderIntro:FC = () => {
   const decorOpacity = useTransform(scrollY, [0, 300], [1, 0])
   const rightDecorTransition = useTransform(scrollY, [0, 300], [-150, -500])
   const titleTransition = useTransform(scrollY, [0, 300], [1, 0])
+  const titleTop = useTransform(scrollY, [0, 1000], [0, -1000])
+  const titleWrapperTransition = useTransform(scrollY, [0, 1500], ['100%', '0px'])
   const fontSize = useTransform(scrollY, offsetY, ['20px', '16px'])
   const wrapperPaddingTop = useTransform(scrollY, offsetY, ['20px', '0px'])
   const logoTransition = useTransform(scrollY, offsetY, ['150px', '70px'])
@@ -54,8 +56,8 @@ const HeaderIntro:FC = () => {
             <Link to='/' className={`${headerStyles.header__button} link-default`}>Профиль</Link>
           </motion.div>
         </motion.div>
-        <motion.div>
-          <motion.div className={headerStyles.header__title} style={{ opacity: titleTransition }} variants={titleAnimation} animate='show' initial='hidden'></motion.div>
+        <motion.div  style={{height: titleWrapperTransition }}>
+          <motion.div className={headerStyles.header__title} style={{ opacity: titleTransition, top: titleTop }} variants={titleAnimation} animate='show' initial='hidden'></motion.div>
           <motion.div className={headerStyles.header__decor_position_left} style={{ left: leftDecorTransition, opacity: decorOpacity }} variants={boyAnimation} animate="show" initial="hidden" exit="hidden"></motion.div>
           <motion.div className={headerStyles.header__decor_position_right} style={{ right: rightDecorTransition, opacity: decorOpacity }} variants={leafAnimation} animate="show" initial="hidden" exit="hidden"></motion.div>
         </motion.div>

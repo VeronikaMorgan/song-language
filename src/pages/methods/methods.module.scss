@@ -20,7 +20,7 @@
 
     &_item {
       margin-left: 3em;
-      font-size: var(--header-df-size);
+      font-size: var(--heading-df-size);
       font-weight: 500;
       z-index: 1;
     }
@@ -30,7 +30,7 @@
       transform: rotate(270deg);
       display: block;
       font-weight: 700;
-      font-size: var(--header-lg-size);
+      font-size: var(--heading-lg-size);
       position: absolute;
       left: -2.7em;
       top: 35%;
@@ -102,17 +102,6 @@
       color: var(--main-highlight-color);
       font-size: var(--header-lg-size);
   }
-  // &__wrapper{
-  //     margin-left: 16rem;
-  //     margin-top: 6rem;
-  //     display: flex;
-  //     justify-content: space-between;
-  //     align-items: center;
-  //     &>img{
-  //         width: 40%;
-  //         height: 50%;
-  //     }
-  // }
   &__content-plus{
       max-width: 40%;
   }
@@ -194,6 +183,26 @@
   &__cards {
     align-items: flex-start;
     gap: 100px
+  }
+}
+
+.criteria {
+  &__img {
+    composes: img;
+    background-image: url('../../images/methods/criteria.png');
+    width: 445px;
+    height: 400px;
+  }
+  &__slider__descr {
+    font-size: var(--heading-lg-size);
+    font-weight: 600;
+  }
+  &__time {
+    composes: img;
+    background-image: url('../../images/methods/criteria-time.png');
+    width: 250px;
+    height: 290px;
+    margin-right: 100px;
   }
 }
 
