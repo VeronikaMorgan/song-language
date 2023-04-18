@@ -129,7 +129,7 @@ const MethodsPage: FC = () => {
       </section>
       <section className={`${styles.section} ${methodsStyles.functions__cards}`}>
         <ContentCard color='--content-color-red' title="Обучающая" height="55vh">
-          <ScrollArea width="10px" trackColor="#EBEBEB" thumbColor="#B85953">
+          <ScrollArea width="10px" trackColor='--content-color-grey' thumbColor="--content-color-red">
             <p className="text text_type_sm"><span className="text_type_accented">Музыка</span> — это форма искусства, присутствующая во всем мире и разделяемая людьми разных культур,
               возрастов и языков. Генри Уодсворт Лонгфелло однажды сказал о музыке: </p>
             <p className="text text_type_sm" style={{ color: `var(--content-color-red)` }}>«Музыка — это универсальный язык человечества».</p>
@@ -142,7 +142,7 @@ const MethodsPage: FC = () => {
           </ScrollArea>
         </ContentCard>
         <ContentCard color='--content-color-yellow' title="Образовательная" height="55vh">
-          <ScrollArea width="10px" trackColor="#EBEBEB" thumbColor="#F5BF6B">
+          <ScrollArea width="10px" trackColor='--content-color-grey' thumbColor='--content-color-yellow'>
             <p className="text text_type_sm"><span className="text_type_accented">Песня</span> представляет собой эффективное средство для усвоения лексического материала,
               способствует расширению словарного запаса.  </p>
             <p className="text text_type_sm">Песни способствуют активизации уже изученной лексики. В контексте песни,
@@ -165,7 +165,7 @@ const MethodsPage: FC = () => {
           </ScrollArea>
         </ContentCard>
         <ContentCard color='--content-color-light-green' title="Эмоциональная" height="55vh">
-          <ScrollArea width="10px" trackColor="#EBEBEB" thumbColor="#AEDDB1">
+          <ScrollArea width="10px" trackColor='--content-color-grey' thumbColor="--content-color-light-green">
             <p className="text text_type_sm"><span className="text_type_accented">Включение песен</span> в программу обучения языку способствует формированию социокультурной компетенции учеников.
               Существует множество песен отражающие реалии страны изучаемого языка (Toto Cutugno «L'Italiano»).</p>
             <p className="text text_type_sm">

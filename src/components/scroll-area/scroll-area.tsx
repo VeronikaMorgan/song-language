@@ -155,7 +155,7 @@ const Scrollbar:FC<IScrollbar> = ({
           className={styles.custom_scrollbar__track}
           ref={scrollTrackRef}
           onClick={handleTrackClick}
-          style={{ cursor: isDragging ? 'grabbing' : 'default', backgroundColor: trackColor }}
+          style={{ cursor: isDragging ? 'grabbing' : 'default', backgroundColor:  `var(${trackColor})`}}
         ></div>
         <div
           className={styles.custom_scrollbar__thumb}
@@ -164,7 +164,7 @@ const Scrollbar:FC<IScrollbar> = ({
           style={{
             height: `${thumbHeight}px`,
             cursor: isDragging ? 'grabbing' : 'grab',
-            backgroundColor: thumbColor
+            backgroundColor: `var(${thumbColor})`
           }}
         ></div>
       </div>
