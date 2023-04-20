@@ -1,0 +1,35 @@
+.flip_card {
+  width: 30%;
+  height: 400px;
+  max-height: 400px;
+  @media screen and (min-width: 1800px){
+    height: 450px;
+    max-height: 450px;
+  }
+  &__heading {
+    font-size: var(--heading-df-size);
+  }
+  &__face {
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em 1.5em;
+    border-radius: 2.7rem;
+    max-width: fit-content;
+    text-align: justify;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.138);
+    box-sizing: border-box;
+  }
+
+  &__face_front {
+    composes: flip_card__face;
+    background-color: var(--content-color-light-green);
+  }
+
+  &__face_back {
+    composes: flip_card__face;
+    background-color: var(--content-color-yellow);
+  }
+}
