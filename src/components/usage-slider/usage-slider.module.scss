@@ -1,0 +1,41 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2em;
+}
+
+.wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  &_after_text_slide {
+    &::after {
+      position: absolute;
+      content: '';
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: block;
+      background-image: url('../../images/usage/slider/after-text-slide.png');
+      width: 122px;
+      height: 121px;
+      right: 0;
+      bottom: 0;
+      transform: rotate(329deg);
+    }
+  }
+  &_art_slide {
+    &::after {
+      position: absolute;
+      content: '';
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: block;
+      background-image: url('../../images/usage/slider/art-slide.png');
+      width: 102px;
+      height: 90px;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

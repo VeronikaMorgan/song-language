@@ -1,14 +1,44 @@
+.img {
+  content: '';
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+
 .flip_card {
   width: 30%;
   height: 400px;
   max-height: 400px;
-  @media screen and (min-width: 1800px){
+
+  @media screen and (min-width: 1800px) {
     height: 450px;
     max-height: 450px;
   }
+
+  &__descr {
+    position: relative;
+
+  }
+
+  &__arrow {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    background-image: url('../../images/usage/arrow.png');
+    transform: rotate(185deg);
+    height: 47px;
+    width: 60px;
+    left: -130px;
+    top: 30%;
+    animation: arrowAnimation 1s ease-in-out infinite alternate;
+  }
+
   &__heading {
     font-size: var(--heading-df-size);
   }
+
   &__face {
     display: flex;
     gap: 2em;
@@ -32,4 +62,17 @@
     composes: flip_card__face;
     background-color: var(--content-color-yellow);
   }
+}
+
+@keyframes arrowAnimation {
+  0% {
+    left: -130px
+  }
+  100% {
+    left: -150px
+  }
+}
+
+.slider__descr {
+  width: 70%;
 }
