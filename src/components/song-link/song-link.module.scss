@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  cursor: pointer;
+  margin-left: auto;
+  position: relative;
+}
+
+.icon {
+  background-image: url('../../images/song-link/youtube.svg');
+  display: block;
+  width: 42px;
+  height: 27px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.name__wrapper {
+  font-family: 'Kalam';
+  font-size: var(--text-main-size);
+  display: flex;
+  flex-direction: column;
+}

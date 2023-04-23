@@ -4,3 +4,10 @@ export interface IArrowLink {
   to: string
   type: typeof RIGHT_LINK | typeof LEFT_LINK
 }
+
+export type TSong = {
+  link: string
+  performer: string | null
+  name: string
+}
+

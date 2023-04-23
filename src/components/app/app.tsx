@@ -11,10 +11,17 @@ import MethodsPage from "../../pages/methods/methods";
 import UsagePage from "../../pages/usage/usage";
 import EfficiencyPage from "../../pages/efficiency/efficiency";
 import Footer from "../footer/footer";
-
-
+import { useAppDispatch } from "../../utils/hooks/typed-app-hooks";
+import { useEffect } from "react";
+import { songs } from "../../utils/mocks/songs";
+import { getSongs } from "../../servises/slices/songs-slice";
 const App: FC = () => {
-  const showAnimation = useIntro()
+const showAnimation = useIntro()
+const dispatch = useAppDispatch()
+
+useEffect(() => {
+   dispatch(getSongs(songs))
+}, [])
 
   return (
     <div className={styles.main}>
