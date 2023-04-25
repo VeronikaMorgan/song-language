@@ -10,7 +10,9 @@ import UsageSlider from "../../components/usage-slider/usage-slider";
 import OrderedHeading from "../../components/ordered-heading/ordered-heading";
 import ExampleBlock from "../../components/example-block/example-block";
 import SongLink from "../../components/song-link/song-link";
+import FixedBlock from "../../components/fixed/fixed";
 import { songs } from "../../utils/mocks/songs";
+import CardDeck from "../../components/card-deck/card-deck";
 import { FACE_TYPE_BACK, FACE_TYPE_FRONT, BLOCK_TYPE_LEFT, BLOCK_TYPE_RIGHT } from "../../utils/constants";
 import { motion, useTransform } from "framer-motion";
 import { useAnimationContext } from "../../components/animated-route/animated-route";
@@ -73,7 +75,7 @@ const UsagePage: FC = () => {
       <section className={styles.section}>
         <OrderedHeading text="Предтекстовый этап" number={1} className={styles.section__heading} />
         <div className={usageStyles.stages__grid}>
-          <ExampleBlock color="--content-color-yellow" type={BLOCK_TYPE_LEFT}>
+          <ExampleBlock color="--content-color-yellow" >
             <p>“Bella ciao è uno dei canti popolari italiani più conosciuti in tutto il mondo anche grazie al suo inserimento nella famosa serie Netflix “La casa di carta.”
             </p>
             <p>
@@ -92,13 +94,110 @@ const UsagePage: FC = () => {
             сосредоточится на интересных фактах об исполнителе, истории создания песни и ее названии.
             Отдельно стоит подчеркнуть связь песни с мировыми конкурсами, знакомыми ученикам фильмами и сериалами если таковые имеются, чтобы они смогли провести ряд собственных ассоциаций:
           </p>
-          <ExampleBlock color="--content-color-light-green" type={BLOCK_TYPE_RIGHT}>
+          <ExampleBlock color="--content-color-light-green">
             <p>“Sicuramente lo sapete già: il gruppo rock Måneskin, dopo aver trionfato a Sanremo, ha vinto anche l'edizione 2021 di Eurovision.
               Era dal 1990 che un cantante italiano non vinceva questo concorso canoro internazionale. I Måneskin ci sono riusciti con la loro canzone vincitrice: “Zitti e buoni”. Innanzitutto analizziamo il titolo: in italiano, nell’espressione “zitti e buoni” c’è un imperativo, ovvero “state zitti e buoni!”
             </p>
             <p> Questa è una frase usata spesso dagli insegnanti nei confronti di quegli studenti che in classe disturbano lo svolgimento della lezione. È acquista però spesso una connotazione repressiva per molti allievi, che si sentono così forzati a non esprimere la loro vitalità e la loro creatività un po’ ribelle, tipica della loro età.
               Per questo questa canzone è invito alle giovani generazioni a non abbassare la testa e a continuare a inseguire i loro sogni, rifiutandosi di stare zitti e buoni.”</p>
-              <SongLink songName='zitti e buoni' />
+            <SongLink songName='zitti e buoni' />
+          </ExampleBlock>
+        </div>
+      </section>
+      <section className={styles.section}>
+        <FixedBlock>
+          <div className={styles.section__flex}>
+            <div className={styles.section__content}>
+              <CardDeck>
+                <ExampleBlock color="--content-color-light-green">
+                  <p className="text text_type_large">1</p>
+                  <SongLink songName='bella ciao' />
+                </ExampleBlock>
+                <ExampleBlock color="--content-color-yellow">
+                <p className="text text_type_large">2</p>
+                  <SongLink songName='bella ciao' />
+                </ExampleBlock>
+                <ExampleBlock color="--content-color-red">
+                <p className="text text_type_large">3</p>
+                  <SongLink songName='bella ciao' />
+                </ExampleBlock>
+              </CardDeck>
+            </div>
+            <div className={styles.section__content}>
+              <p className="text text_type_main">К основным, вызывающим у учеников трудности, языковым едини-цам можно отнести профессиональную,
+                специальную и не частотную лек-сику, неправильные глаголы и многоэлементные модальные или времен-ные формы глаголов.
+              </p>
+              <p className="text text_type_main">При работе со сложными грамматическими структурами важно по-мочь ученикам образовать начальную форму сложных глаголов и их формы встречающиеся в тексте песни.
+                Для облегчения задачи следует обо-значить спряжение глаголов.
+              </p>
+              <p className="text">На старшем этапе обучения лексика объясняется беспереводным способом, с помощью синонимов или фраз, раскрывающих основное семан-тическое значение языковых единиц.
+                Это оказывает влияние на выбор упражнений, примерами которых могут служить следующие:
+              </p>
+            </div>
+          </div>
+        </FixedBlock>
+      </section>
+      <section className={styles.section}>
+        <OrderedHeading text="Предтекстовый этап" number={1} className={styles.section__heading} />
+        <div className={usageStyles.stages__grid}>
+          <ExampleBlock color="--content-color-yellow" >
+            <p>“Bella ciao è uno dei canti popolari italiani più conosciuti in tutto il mondo anche grazie al suo inserimento nella famosa serie Netflix “La casa di carta.”
+            </p>
+            <p>
+              Bella Ciao viene associato ai partigiani e alla Resistenza: le parole del testo evocano la libertà, la lotta contro le dittature e l'opposizione agli estremismi,
+              e per questa ragione Bella ciao è considerata la canzone un simbolo della Resistenza italiana nata durante la seconda guerra mondiale, quando si combatteva contro le truppe fasciste e naziste.”
+            </p>
+            <SongLink songName='bella ciao' />
+          </ExampleBlock>
+          <p className="text text_type_main text_last">Вводная речь учителя, несомненно, варьируется от выбранного материала,
+            но в тоже время имеет два основных сценария. Если песня является отражением исторического периода или культурного движения в Италии,
+            следует предоставить историческую справку, которая поможет ученикам понять исторический фон, послуживший основой ее создания,
+            найти возможные отсылки в ее тексте намекающие на позицию автора или важные события. Речь учителя в этом случае должна содержать всю основную тематическую лексику:
+          </p>
+          <p className="text text_type_main text_last">В случае если песня посвящена общим темам любви и отношений,
+            культурным особенностям итальянцев, социальным проблемам или несет юмористический посыл, учителю следует
+            сосредоточится на интересных фактах об исполнителе, истории создания песни и ее названии.
+            Отдельно стоит подчеркнуть связь песни с мировыми конкурсами, знакомыми ученикам фильмами и сериалами если таковые имеются, чтобы они смогли провести ряд собственных ассоциаций:
+          </p>
+          <ExampleBlock color="--content-color-light-green">
+            <p>“Sicuramente lo sapete già: il gruppo rock Måneskin, dopo aver trionfato a Sanremo, ha vinto anche l'edizione 2021 di Eurovision.
+              Era dal 1990 che un cantante italiano non vinceva questo concorso canoro internazionale. I Måneskin ci sono riusciti con la loro canzone vincitrice: “Zitti e buoni”. Innanzitutto analizziamo il titolo: in italiano, nell’espressione “zitti e buoni” c’è un imperativo, ovvero “state zitti e buoni!”
+            </p>
+            <p> Questa è una frase usata spesso dagli insegnanti nei confronti di quegli studenti che in classe disturbano lo svolgimento della lezione. È acquista però spesso una connotazione repressiva per molti allievi, che si sentono così forzati a non esprimere la loro vitalità e la loro creatività un po’ ribelle, tipica della loro età.
+              Per questo questa canzone è invito alle giovani generazioni a non abbassare la testa e a continuare a inseguire i loro sogni, rifiutandosi di stare zitti e buoni.”</p>
+            <SongLink songName='zitti e buoni' />
+          </ExampleBlock>
+        </div>
+      </section>
+      <section className={styles.section}>
+        <OrderedHeading text="Предтекстовый этап" number={1} className={styles.section__heading} />
+        <div className={usageStyles.stages__grid}>
+          <ExampleBlock color="--content-color-yellow" >
+            <p>“Bella ciao è uno dei canti popolari italiani più conosciuti in tutto il mondo anche grazie al suo inserimento nella famosa serie Netflix “La casa di carta.”
+            </p>
+            <p>
+              Bella Ciao viene associato ai partigiani e alla Resistenza: le parole del testo evocano la libertà, la lotta contro le dittature e l'opposizione agli estremismi,
+              e per questa ragione Bella ciao è considerata la canzone un simbolo della Resistenza italiana nata durante la seconda guerra mondiale, quando si combatteva contro le truppe fasciste e naziste.”
+            </p>
+            <SongLink songName='bella ciao' />
+          </ExampleBlock>
+          <p className="text text_type_main text_last">Вводная речь учителя, несомненно, варьируется от выбранного материала,
+            но в тоже время имеет два основных сценария. Если песня является отражением исторического периода или культурного движения в Италии,
+            следует предоставить историческую справку, которая поможет ученикам понять исторический фон, послуживший основой ее создания,
+            найти возможные отсылки в ее тексте намекающие на позицию автора или важные события. Речь учителя в этом случае должна содержать всю основную тематическую лексику:
+          </p>
+          <p className="text text_type_main text_last">В случае если песня посвящена общим темам любви и отношений,
+            культурным особенностям итальянцев, социальным проблемам или несет юмористический посыл, учителю следует
+            сосредоточится на интересных фактах об исполнителе, истории создания песни и ее названии.
+            Отдельно стоит подчеркнуть связь песни с мировыми конкурсами, знакомыми ученикам фильмами и сериалами если таковые имеются, чтобы они смогли провести ряд собственных ассоциаций:
+          </p>
+          <ExampleBlock color="--content-color-light-green">
+            <p>“Sicuramente lo sapete già: il gruppo rock Måneskin, dopo aver trionfato a Sanremo, ha vinto anche l'edizione 2021 di Eurovision.
+              Era dal 1990 che un cantante italiano non vinceva questo concorso canoro internazionale. I Måneskin ci sono riusciti con la loro canzone vincitrice: “Zitti e buoni”. Innanzitutto analizziamo il titolo: in italiano, nell’espressione “zitti e buoni” c’è un imperativo, ovvero “state zitti e buoni!”
+            </p>
+            <p> Questa è una frase usata spesso dagli insegnanti nei confronti di quegli studenti che in classe disturbano lo svolgimento della lezione. È acquista però spesso una connotazione repressiva per molti allievi, che si sentono così forzati a non esprimere la loro vitalità e la loro creatività un po’ ribelle, tipica della loro età.
+              Per questo questa canzone è invito alle giovani generazioni a non abbassare la testa e a continuare a inseguire i loro sogni, rifiutandosi di stare zitti e buoni.”</p>
+            <SongLink songName='zitti e buoni' />
           </ExampleBlock>
         </div>
       </section>
