@@ -9,3 +9,14 @@ export const findSongByName = (name: string, songs:TSong[]): TSong | undefined =
     return;
   }
 }
+
+export const shuffleArray = (arr: any[]): any[] => {
+  let m = arr.length, t, i;
+  while (m) {
+    i = Math.floor(Math.random() * m--);
+    t = arr[m];
+    arr[m] = arr[i];
+    arr[i] = t;
+  }
+  return arr;
+}

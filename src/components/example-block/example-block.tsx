@@ -10,7 +10,7 @@ interface IExampleBlockProps {
 }
 const ExampleBlock: FC<IExampleBlockProps> = ({ color, className, children}) => {
   return (
-    <div className={styles.wrapper} style={{ borderColor: color ? `var(${color})` : 'inherit' , backgroundColor: color ? `var(${color})` : 'inherit'}}>
+    <div className={styles.wrapper} style={{ borderColor: color ? `var(${color})` : 'inherit' }}>
       {children}
     </div>
   )

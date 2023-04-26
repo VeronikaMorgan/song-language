@@ -11,3 +11,7 @@ export type TSong = {
   name: string
 }
 
+export type TJoinExerciseData = {
+  [name: string] : string
+}
+
