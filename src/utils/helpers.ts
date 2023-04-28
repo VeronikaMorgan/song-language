@@ -20,3 +20,8 @@ export const shuffleArray = (arr: any[]): any[] => {
   }
   return arr;
 }
+
+export const compareArrays = (arr1: string[] | number[], arr2: string[] | number[]):boolean => {
+  if(arr1.length !== arr2.length) return false
+  return JSON.stringify(arr1) === JSON.stringify(arr2)
+} 

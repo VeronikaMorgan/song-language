@@ -7,3 +7,9 @@ export const joinData:TJoinExerciseData = {
   "Mo’": "Adesso, ora",
   "Fuori di testa": "Pazzo, matto"
 }
+
+export const motionVerbs:TJoinExerciseData = {
+  "arrivare": "приходить",
+  "tornare": "возвращаться",
+  "passeggiare": "гулять"
+}

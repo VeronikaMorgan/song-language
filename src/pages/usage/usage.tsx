@@ -12,7 +12,7 @@ import ExampleBlock from "../../components/example-block/example-block";
 import SongLink from "../../components/song-link/song-link";
 import FixedBlock from "../../components/fixed/fixed";
 import { songs } from "../../utils/mocks/songs";
-
+import { motionVerbs } from "../../utils/mocks/exercises/join";
 import JoinExercise from "../../components/exercises/join/join";
 import { joinData } from "../../utils/mocks/exercises/join";
 import { FACE_TYPE_BACK, FACE_TYPE_FRONT, BLOCK_TYPE_LEFT, BLOCK_TYPE_RIGHT } from "../../utils/constants";
@@ -109,7 +109,7 @@ const UsagePage: FC = () => {
       <section className={styles.section}>
           <div className={styles.section__flex}>
             <div className={styles.section__content}>
-              <JoinExercise data={joinData}/>
+              <JoinExercise data={motionVerbs} color='--content-color-light-green'/>
             </div>
             <div className={styles.section__content}>
               <p className="text text_type_main">К основным, вызывающим у учеников трудности, языковым едини-цам можно отнести профессиональную,
