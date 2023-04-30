@@ -15,3 +15,9 @@ export type TJoinExerciseData = {
   [name: string] : string
 }
 
+export type TChooseExerciseData = {
+  name: string,
+  options: string[],
+  rightOption: number
+}
+

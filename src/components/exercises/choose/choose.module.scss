@@ -1,5 +1,6 @@
 .wrapper {
   max-width: fit-content;
+  max-width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,35 +19,14 @@
 }
 
 .exercise {
-  min-width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 2em
-}
-
-.items {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1em;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2em;
 }
 
-.key{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: .5em 1em;
-  border-radius: 2.7rem;
-  border: 3px solid ;
-  box-sizing: border-box;
-}
-
-
-.value {
-  composes: key;
-  cursor: grab;
-}
 
 .retry {
   align-self: flex-end;
