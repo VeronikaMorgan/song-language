@@ -1,6 +1,9 @@
 .item {
   &__title {
   margin-left: 1em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   }
   &__options {
     display: flex;

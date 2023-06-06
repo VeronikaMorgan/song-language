@@ -20,7 +20,7 @@ import { joinData } from "../../utils/mocks/exercises/join";
 import { FACE_TYPE_BACK, FACE_TYPE_FRONT, BLOCK_TYPE_LEFT, BLOCK_TYPE_RIGHT } from "../../utils/constants";
 import { motion, useTransform } from "framer-motion";
 import { useAnimationContext } from "../../components/animated-route/animated-route";
-
+import { shuffleArray } from "../../utils/helpers";
 
 const UsagePage: FC = () => {
   const { showAnimation, scrollY, offsetY } = useAnimationContext();

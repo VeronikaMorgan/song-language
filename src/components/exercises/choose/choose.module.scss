@@ -1,11 +1,10 @@
 .wrapper {
   max-width: fit-content;
-  max-width: fit-content;
+  max-height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 1em;
+  gap: 2em;
   position: relative;
 }
 
@@ -29,5 +28,22 @@
 
 
 .retry {
+  // align-self: flex-end;
+}
+
+.check {
+  font-size: var(--heading-df-size);
+  font-weight: 500;
+  padding: 0.5em 1em;
+  border-radius: 2.7rem;
+  margin-right: 5em;
   align-self: flex-end;
+}
+
+.btns {
+  margin-left: 1em;
+  display: flex;
+  gap: 2em;
+  justify-content: flex-start;
+  width: 100%;
 }

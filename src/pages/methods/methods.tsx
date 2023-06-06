@@ -10,7 +10,7 @@ import MethodsSliderSm from "../../components/methods-sliders/methods-slider_sm/
 import ContentCard from "../../components/content-card/content-card";
 import ScrollArea from "../../components/scroll-area/scroll-area";
 import styles from '../pages.module.scss';
-
+import { shuffleArray } from "../../utils/helpers";
 const MethodsPage: FC = () => {
   const { showAnimation, scrollY, offsetY } = useAnimationContext()
   const marginTop = useTransform(scrollY, offsetY, offsetY)
